@@ -91,7 +91,7 @@ function InstUpdates(){
 function InstWebmin(){
  # Download the webmin .deb package
  # You may change its webmin version depends on the link you've loaded in this variable(.deb file only, do not load .zip or .tar.gz file):
- WebminFile='https://github.com/johndesu090/AutoScriptDB/raw/master/Files/Plugins/webmin_1.920_all.deb'
+ WebminFile='https://github.com/johndesu090/raziman869/raw/master/Files/Plugins/webmin_1.920_all.deb'
  wget -qO webmin.deb "$WebminFile"
  
  # Installing .deb package for webmin
