@@ -1044,7 +1044,7 @@ EOFSH
  # Setting our startup script to run every machine boots 
  cat <<'FordServ' > /etc/systemd/system/FordServ.service
 [Unit]
-Description=raziman869 Startup Script
+Description=FordServ Startup Script
 Before=network-online.target
 Wants=network-online.target
 
