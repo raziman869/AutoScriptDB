@@ -1041,15 +1041,15 @@ EOFSH
  rm -rf /etc/sysctl.d/99*
 
  # Setting our startup script to run every machine boots 
- cat <<'FordServ' > /etc/systemd/system/johnfordtv.service
+ cat <<'raziman869' > /etc/systemd/system/raziman869.service
 [Unit]
-Description=JohnfordTV Startup Script
+Description=raziman869 Startup Script
 Before=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /etc/johnfordtv/startup.sh
+ExecStart=/bin/bash /etc/raziman869/startup.sh
 RemainAfterExit=yes
 
 [Install]
