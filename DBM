@@ -1027,7 +1027,7 @@ EOFSH
  rm -rf /etc/sysctl.d/99*
 
  # Setting our startup script to run every machine boots 
- cat <<'DevServ' > /etc/systemd/system/SigulaDev.service
+ cat <<'Dev.Serv' > /etc/systemd/system/SigulaDev.service
 [Unit]
 Description=SigulaDev Startup Script
 Before=network-online.target
