@@ -1,20 +1,19 @@
 #!/bin/bash
-# SigulaDev VPN Premium Script
-# Official Repository: SigulaDev
+# SgulaDev's VPN Premium Script
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
 
 #############################
 #############################
 # Variables (Can be changed depends on your preferred values)
 # Script name
-MyScriptName='SigulaDev-Premium Script'
+MyScriptName='SgulaDev-Premium Script'
 
 # OpenSSH Ports
 SSH_Port1='22'
 SSH_Port2='53'
 
 # Your SSH Banner
-SSH_Banner='https://raw.githubusercontent.com/SigulaDev/AutoScriptDB/master/Files/Plugins/banner'
+SSH_Banner='https://raw.githubusercontent.com/raziman869/AutoScriptDB/master/Files/Plugins/banner'
 
 # Dropbear Ports
 Dropbear_Port1='445'
@@ -34,8 +33,8 @@ Privoxy_Port2='8086'
 
 # Squid Ports
 Squid_Port1='80'
-Squid_Port2='8080'
-Squid_Port3='3128'
+Squid_Port2='3128'
+Squid_Port3='80'
 
 # OpenVPN Config Download Port
 OvpnDownload_Port='85' # Before changing this value, please read this document. It contains all unsafe ports for Google Chrome Browser, please read from line #23 to line #89: https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
@@ -345,11 +344,11 @@ Certificate:
         Version: 3 (0x2)
         Serial Number: 1 (0x1)
     Signature Algorithm: sha256WithRSAEncryption
-        Issuer: C=MY, ST=Tarlac, L=Concepcion, SigulaDev, OU=SigulaDev, CN=DebianVPN/name=SigulaDev SigulaDev Mangiliman/emailAddress=admin@SigulaDev.me
+        Issuer: C=PH, ST=Tarlac, L=Concepcion, O=SgulaDevSgulaDevSgulaDev, OU=SgulaDevSgulaDev, CN=SgulaDev/name=si gula Mangiliman/emailAddress=admin@johnfordtv.me
         Validity
             Not Before: Nov 25 08:06:59 2019 GMT
             Not After : Nov 22 08:06:59 2029 GMT
-        Subject: C=PH, ST=Tarlac, L=Concepcion, O=SigulaDev, OU=SigulaDev, CN=DebianVPN/name=SigulaDevSigulaDev SigulaDev Mangiliman/emailAddress=admin@SigulaDev.me
+        Subject: C=PH, ST=Tarlac, L=Concepcion, O=SgulaDevSgulaDev, OU=SgulaDev, CN=DebianVPN/name=si gula Mangiliman/emailAddress=admin@SigulaDev.me
         Subject Public Key Info:
             Public Key Algorithm: rsaEncryption
                 Public-Key: (2048 bit)
@@ -384,7 +383,7 @@ Certificate:
                 50:31:04:C4:7A:47:C1:DA:46:CC:77:38:DE:1C:63:10:40:C3:80:22
             X509v3 Authority Key Identifier:
                 keyid:2D:71:9E:0D:00:4B:5C:23:C8:77:41:77:AF:FE:7C:14:30:A6:8C:2E
-                DirName:/C=PH/ST=Tarlac/L=Concepcion/O=SigulaDevSigulaDevSigulaDev/OU=SigulaDevSigulaDev/CN=DebianVPN/name=SigulaDev SigulaDev Mangiliman/emailAddress=admin@SigulaDev.me
+                DirName:/C=PH/ST=Tarlac/L=Concepcion/O=SgulaDev/OU=FordTV/CN=DebianVPN/name=si gula Mangiliman/emailAddress=admin@johnfordtv.me
                 serial:8C:5B:0D:CB:E1:EA:F3:C4
 
             X509v3 Extended Key Usage:
@@ -392,7 +391,7 @@ Certificate:
             X509v3 Key Usage:
                 Digital Signature, Key Encipherment
             X509v3 Subject Alternative Name:
-                DNS:serverSigulaDev
+                DNS:server
     Signature Algorithm: sha256WithRSAEncryption
          87:59:21:fd:7d:41:c8:87:8f:ff:13:85:e9:ae:31:da:43:bc:
          48:3b:32:41:ba:65:82:9e:76:25:cd:43:8b:fc:07:16:49:c3:
@@ -509,7 +508,7 @@ done
  # executed/raised from this script (OpenVPN_TCP_Port/OpenVPN_UDP_Port)
  #
  # Enjoy the new update
- # Script Updated by SigulaDev
+ # Script Updated by SgulaDev
 NUovpn
 
  # setting openvpn server port
@@ -669,7 +668,7 @@ reply_header_access Connection allow all
 reply_header_access Proxy-Connection allow all 
 reply_header_access User-Agent allow all 
 reply_header_access Cookie allow all 
-reply_header_access All allow all
+reply_header_access All deny all
 ### CoreDump
 coredump_dir /var/spool/squid
 dns_nameservers 8.8.8.8 8.8.4.4
@@ -677,7 +676,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname SigulaDev
+visible_hostname SgulaDev
 mySquid
 
  # Setting machine's IP Address inside of our Squid config(security that only allows this machine to use this proxy server)
@@ -695,7 +694,7 @@ mySquid
 
 function OvpnConfigs(){
  # Creating nginx config for our ovpn config downloads webserver
- cat <<'myNginxC' > /etc/nginx/conf.d/SigulaDev-ovpn-config.conf
+ cat <<'myNginxC' > /etc/nginx/conf.d/johnfordtv-ovpn-config.conf
 # My OpenVPN Config Download Directory
 server {
  listen 0.0.0.0:myNginx;
@@ -718,12 +717,12 @@ myNginxC
  # Now creating all of our OpenVPN Configs 
 
 cat <<EOF15> /var/www/openvpn/gtmsnswnp.ovpn
-# SigulaDev VPN Premium Script
+# SigulaDev's VPN Premium Script
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "Debian VPN"
+setenv FRIENDLY_NAME "Debian VPN WNP"
 remote $IPADDR $OpenVPN_TCP_Port
 nobind
 persist-key
@@ -760,12 +759,12 @@ $(cat /etc/openvpn/ca.crt)
 EOF15
 
 cat <<EOF16> /var/www/openvpn/sun-tutcp.ovpn
-# SigulaDev VPN Premium Script
+# SigulaDev's VPN Premium Script
 # Thanks for using this script, Enjoy Highspeed OpenVPN Service
 client
 dev tun
 proto tcp
-setenv FRIENDLY_NAME "Debian VPN"
+setenv FRIENDLY_NAME "Debian VPN SUN"
 remote $IPADDR $OpenVPN_TCP_Port
 remote-cert-tls server
 connect-retry infinite
@@ -798,7 +797,7 @@ cat <<EOF162> /var/www/openvpn/sun-tuudp.ovpn
 client
 dev tun
 proto udp
-setenv FRIENDLY_NAME "Debian VPN"
+setenv FRIENDLY_NAME "Debian VPN SUN"
 remote $IPADDR $OpenVPN_UDP_Port
 remote-cert-tls server
 resolv-retry infinite
@@ -977,9 +976,9 @@ cat <<'mySiteOvpn' > /var/www/openvpn/index.html
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Simple OVPN Download site by SigulaDev -->
+<!-- Simple OVPN Download site by JohnFordTV -->
 
-<head><meta charset="utf-8" /><title>SigulaDev OVPN Config Download</title><meta name="description" content="MyScriptName Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group"><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> UDP Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> TCP+Proxy Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Globe/TM <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> For EasySURF/GoSURF/GoSAKTO Promos with WNP,SNS,FB and IG freebies</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/gtmwnp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Modem</span><br /><small> Without Promo/Noload (Reconnecting Server, Use Low-latency VPS for fast reconnectivity)</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-noload.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li></ul></div></div></div></div></body></html>
+<head><meta charset="utf-8" /><title>JohnFordTV OVPN Config Download</title><meta name="description" content="MyScriptName Server" /><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /><meta name="theme-color" content="#000000" /><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"><link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.3/css/mdb.min.css" rel="stylesheet"></head><body><div class="container justify-content-center" style="margin-top:9em;margin-bottom:5em;"><div class="col-md"><div class="view"><img src="https://openvpn.net/wp-content/uploads/openvpn.jpg" class="card-img-top"><div class="mask rgba-white-slight"></div></div><div class="card"><div class="card-body"><h5 class="card-title">Config List</h5><br /><ul class="list-group"><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> UDP Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> TCP+Proxy Server For TU/CTC/CTU Promos</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-tuudp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Globe/TM <span class="badge light-blue darken-4">Android/iOS/PC/Modem</span><br /><small> For EasySURF/GoSURF/GoSAKTO Promos with WNP,SNS,FB and IG freebies</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/gtmwnp.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li><li class="list-group-item justify-content-between align-items-center" style="margin-bottom:1em;"><p>For Sun <span class="badge light-blue darken-4">Modem</span><br /><small> Without Promo/Noload (Reconnecting Server, Use Low-latency VPS for fast reconnectivity)</small></p><a class="btn btn-outline-success waves-effect btn-sm" href="http://IP-ADDRESS:NGINXPORT/sun-noload.ovpn" style="float:right;"><i class="fa fa-download"></i> Download</a></li></ul></div></div></div></div></body></html>
 mySiteOvpn
  
  # Setting template's correct name,IP address and nginx Port
@@ -1009,13 +1008,12 @@ function ConfStartup(){
  echo -e "0 4\t* * *\troot\treboot" > /etc/cron.d/b_reboot_job
 
  # Creating directory for startup script
- rm -rf /etc/SigulaDev
- 
- mkdir -p /etc/SigulaDev
- chmod -R 755 /etc/SigulaDev
+ rm -rf /etc/johnfordtv
+ mkdir -p /etc/johnfordtv
+ chmod -R 755 /etc/johnfordtv
  
  # Creating startup script using cat eof tricks
- cat <<'EOFSH' > /etc/raziman869/startup.sh
+ cat <<'EOFSH' > /etc/johnfordtv/startup.sh
 #!/bin/bash
 # Setting server local time
 ln -fs /usr/share/zoneinfo/MyVPS_Time /etc/localtime
@@ -1033,33 +1031,33 @@ iptables -A INPUT -s $(wget -4qO- http://ipinfo.io/ip) -p tcp -m multiport --dpo
 /usr/local/sbin/delete_expired &> /dev/null
 exit 0
 EOFSH
- chmod +x /etc/SigulaDev/startup.sh
+ chmod +x /etc/johnfordtv/startup.sh
  
  # Setting server local time every time this machine reboots
- sed -i "s|MyVPS_Time|$MyVPS_Time|g" /etc/SigulaDev/startup.sh
+ sed -i "s|MyVPS_Time|$MyVPS_Time|g" /etc/johnfordtv/startup.sh
 
  # 
  rm -rf /etc/sysctl.d/99*
 
  # Setting our startup script to run every machine boots 
- cat <<'FordServ' > /etc/systemd/system/FordServ.service
+ cat <<'FordServ' > /etc/systemd/system/johnfordtv.service
 [Unit]
-Description=FordServ Startup Script
+Description=johnfordtv Startup Script
 Before=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /etc/raziman869/startup.sh
+ExecStart=/bin/bash /etc/johnfordtv/startup.sh
 RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
-SigulaDev
- chmod +x /etc/systemd/system/SigulaDev.service
+FordServ
+ chmod +x /etc/systemd/system/johnfordtv.service
  systemctl daemon-reload
- systemctl start SigulaDev
- systemctl enable SigulaDev &> /dev/null
+ systemctl start johnfordtv
+ systemctl enable johnfordtv &> /dev/null
  systemctl enable fail2ban &> /dev/null
  systemctl start fail2ban &> /dev/null
 
@@ -1090,8 +1088,8 @@ cd ~
 function ScriptMessage(){
  echo -e " [\e[1;32m$MyScriptName VPS Installer\e[0m]"
  echo -e ""
- echo -e " SigulaDev"
- echo -e "SigulaDev"
+ echo -e " johnfordtv"
+ echo -e "[GCASH]"
  echo -e ""
 }
 
@@ -1216,7 +1214,7 @@ echo " "
 echo "Installation has been completed!!"
 echo "--------------------------------------------------------------------------------"
 echo "                            Debian Premium Script                               "
-echo "                                 -SigulaDev-                                   "
+echo "                                 -SiGula-                                   "
 echo "--------------------------------------------------------------------------------"
 echo ""  | tee -a log-install.txt
 echo "Server Information"  | tee -a log-install.txt
