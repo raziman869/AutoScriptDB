@@ -14,7 +14,7 @@ SSH_Port1='22'
 SSH_Port2='53'
 
 # Your SSH Banner
-SSH_Banner='https://raw.githubusercontent.com/johndesu090/AutoScriptDB/master/Files/Plugins/banner'
+SSH_Banner='https://raw.githubusercontent.com/SigulaDev/AutoScriptDB/master/Files/Plugins/banner'
 
 # Dropbear Ports
 Dropbear_Port1='445'
