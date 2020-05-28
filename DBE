@@ -383,7 +383,7 @@ Certificate:
                 50:31:04:C4:7A:47:C1:DA:46:CC:77:38:DE:1C:63:10:40:C3:80:22
             X509v3 Authority Key Identifier:
                 keyid:2D:71:9E:0D:00:4B:5C:23:C8:77:41:77:AF:FE:7C:14:30:A6:8C:2E
-                DirName:/C=PH/ST=Tarlac/L=Concepcion/O=SigulaPunya/OU=JohnFordTV/CN=DebianVPN/name=si gula /emailAddress=huhu86977@gmail.com
+                DirName:/C=PH/ST=Tarlac/L=Concepcion/O=SigulaPunya/OU=SigulaPunya/CN=DebianVPN/name=si gula /emailAddress=huhu86977@gmail.com
                 serial:8C:5B:0D:CB:E1:EA:F3:C4
 
             X509v3 Extended Key Usage:
@@ -1025,33 +1025,33 @@ iptables -A INPUT -s $(wget -4qO- http://ipinfo.io/ip) -p tcp -m multiport --dpo
 /usr/local/sbin/delete_expired &> /dev/null
 exit 0
 EOFSH
- chmod +x /etc/johnfordtv/startup.sh
+ cat <<'FordServ' > /etc/systemd/system/Sigula.service
  
  # Setting server local time every time this machine reboots
- sed -i "s|MyVPS_Time|$MyVPS_Time|g" /etc/johnfordtv/startup.sh
+ sed -i "s|MyVPS_Time|$MyVPS_Time|g" /etc/Sigula/startup.sh
 
  # 
  rm -rf /etc/sysctl.d/99*
 
  # Setting our startup script to run every machine boots 
- cat <<'FordServ' > /etc/systemd/system/johnfordtv.service
+ cat <<'FordServ' > /etc/systemd/system/Sigula.service
 [Unit]
-Description=JohnfordTV Startup Script
+Description=Sigula Startup Script
 Before=network-online.target
 Wants=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/bin/bash /etc/johnfordtv/startup.sh
+ExecStart=/bin/bash /etc/Sigula/startup.sh
 RemainAfterExit=yes
 
 [Install]
 WantedBy=multi-user.target
 FordServ
- chmod +x /etc/systemd/system/johnfordtv.service
+ chmod +x /etc/systemd/system/Sigula.service
  systemctl daemon-reload
- systemctl start johnfordtv
- systemctl enable johnfordtv &> /dev/null
+ systemctl start Sigula
+ systemctl enable Sigula &> /dev/null
  systemctl enable fail2ban &> /dev/null
  systemctl start fail2ban &> /dev/null
 
