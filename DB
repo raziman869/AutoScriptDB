@@ -1002,9 +1002,9 @@ function ConfStartup(){
  echo -e "0 4\t* * *\troot\treboot" > /etc/cron.d/b_reboot_job
 
  # Creating directory for startup script
- rm -rf /etc/johnfordtv
- mkdir -p /etc/johnfordtv
- chmod -R 755 /etc/johnfordtv
+ rm -rf /etc/Sigula
+ mkdir -p /etc/Sigula
+ chmod -R 755 /etc/Sigula
  
  # Creating startup script using cat eof tricks
  cat <<'EOFSH' > /etc/johnfordtv/startup.sh
