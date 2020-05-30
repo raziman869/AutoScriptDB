@@ -1,6 +1,6 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+#Script by SigulaDev
 
 if [[ $USER != "root" ]]; then
 	echo "Oops! root privileges needed"
