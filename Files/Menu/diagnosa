@@ -1,6 +1,6 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+#Script by SigulaDev
 
 if [[ -e /etc/debian_version ]]; then
 	OS=Debian
