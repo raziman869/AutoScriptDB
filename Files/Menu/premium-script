@@ -203,7 +203,7 @@ diagnosa
 elif test $x -eq 44; then
 echo " "
 echo "Goodbye Menu!"
-echo "Modified by FordSenpai"
+echo "Modified by SigulaDev"
 echo " "
 exit
 elif test $x -eq 45; then
