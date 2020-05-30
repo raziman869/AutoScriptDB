@@ -1,6 +1,6 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+#Script by SigulaDev
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
@@ -32,12 +32,12 @@ echo "-----------------------------------"
 echo "        Account Information        "
 echo "-----------------------------------"
 echo "   Host/IP        : $IP"
-echo "   OpenSSH        : 22, 143"
+echo "   OpenSSH        : 22, 53"
 echo "   OpenVPN        : 1147"
-echo "   OpenVPN SSL    : 587"
+echo "   OpenVPN SSL    : 443"
 echo "   Stunnel        : 444"
 echo "   Dropbear       : 443"
-echo "   Squid Proxy    : 3355, 8085"
+echo "   Squid Proxy    : 8080, 3128 ,80"
 echo "   OpenVPN Config : http://$IP/configs.zip"
 echo "   Until On       : $(date -d "$aktif days" +"%d-%m-%Y")"
   echo "----------------------------------"
