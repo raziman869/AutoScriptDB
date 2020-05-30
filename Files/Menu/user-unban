@@ -1,6 +1,6 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+#Script by SigulaDev
 
 cyan='\e[0;36m'
 red='\e[1;31m'
