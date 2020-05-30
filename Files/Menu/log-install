@@ -1,6 +1,6 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+#Script by SigulaDev
 
 MYIP=$(wget -qO- ipv4.icanhazip.com)
 if [ $MYIP = "" ]; then
@@ -14,12 +14,12 @@ echo ""
 echo "-------"
 echo "SERVICE" 
 echo "-------"  
-echo "OpenVPN     : TCP 1147"  
-echo "OpenVPN SSL : TCP 587"  
-echo "OpenSSH     : 22, 90, 143"  
+echo "OpenVPN     : TCP 1194"  
+echo "OpenVPN SSL : TCP 443"  
+echo "OpenSSH     : 22, 53, 80"  
 echo "Stunnel4    : 444"
 echo "Dropbear    : 442"  
-echo "Squid3      : 3355, 8085 (limit to IP VPS)"  
+echo "Squid3      : 8080, 3128" (limit to IP VPS)"  
 echo "PPTP VPN    : 1723" 
 echo "Badvpn      : badvpn-udpgw port 7300"  
 echo "Nginx       : 80"  
@@ -46,12 +46,12 @@ echo "--------------"
 echo "Webmin   : http://$MYIP:10000/"  
 echo "vnstat   : http://$MYIP/vnstat/"  
 echo "MRTG     : http://$MYIP/mrtg/"  
-echo "Timezone : Asia/Manila"  
+echo "Timezone : Asia/Malaysia"  
 echo "Fail2Ban : [ON]"  
 echo "DDflate  : [ON]"
 echo "IPv6     : [OFF]"  
 echo "" 
 echo "==========================================="
-echo "---------- Created by FordSenpai ----------"
+echo "---------- Created by SigulaDev ----------"
 echo "-------------------------------------------"
 echo " "
