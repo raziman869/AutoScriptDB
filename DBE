@@ -40,7 +40,7 @@ Squid_Port3='80'
 OvpnDownload_Port='85' # Before changing this value, please read this document. It contains all unsafe ports for Google Chrome Browser, please read from line #23 to line #89: https://chromium.googlesource.com/chromium/src.git/+/refs/heads/master/net/base/port_util.cc
 
 # Server local time
-MyVPS_Time='Asia/Malaysia'
+MyVPS_Time='Asia/Manila'
 #############################
 
 
@@ -202,7 +202,7 @@ MyStunnelD
  rm -rf /etc/stunnel/*
  
  # Creating stunnel certifcate using openssl
- openssl req -new -x509 -days 9999 -nodes -subj "/C=PH/ST=NCR/L=Malaysia/O=$MyScriptName/OU=$MyScriptName/CN=$MyScriptName" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
+ openssl req -new -x509 -days 9999 -nodes -subj "/C=PH/ST=NCR/L=Manila/O=$MyScriptName/OU=$MyScriptName/CN=$MyScriptName" -out /etc/stunnel/stunnel.pem -keyout /etc/stunnel/stunnel.pem &> /dev/null
 ##  > /dev/null 2>&1
 
  # Creating stunnel server config
@@ -676,7 +676,7 @@ refresh_pattern ^ftp: 1440 20% 10080
 refresh_pattern ^gopher: 1440 0% 1440
 refresh_pattern -i (/cgi-bin/|\?) 0 0% 0
 refresh_pattern . 0 20% 4320
-visible_hostname SigulaDev
+visible_hostname JohnFordTV
 mySquid
 
  # Setting machine's IP Address inside of our Squid config(security that only allows this machine to use this proxy server)
@@ -694,7 +694,7 @@ mySquid
 
 function OvpnConfigs(){
  # Creating nginx config for our ovpn config downloads webserver
- cat <<'myNginxC' > /etc/nginx/conf.d/SigulaDev-ovpn-config.conf
+ cat <<'myNginxC' > /etc/nginx/conf.d/johnfordtv-ovpn-config.conf
 # My OpenVPN Config Download Directory
 server {
  listen 0.0.0.0:myNginx;
@@ -705,7 +705,7 @@ server {
 myNginxC
 
  # Setting our nginx config port for .ovpn download site
- sed -i "s|myNginx|$OvpnDownload_Port|g" /etc/nginx/conf.d/SigulaDev-ovpn-config.conf
+ sed -i "s|myNginx|$OvpnDownload_Port|g" /etc/nginx/conf.d/johnfordtv-ovpn-config.conf
 
  # Removing Default nginx page(port 80)
  rm -rf /etc/nginx/sites-*
@@ -1007,7 +1007,7 @@ function ConfStartup(){
  chmod -R 755 /etc/Sigula
  
  # Creating startup script using cat eof tricks
- cat <<'EOFSH' > /etc/SigulaDev/startup.sh
+ cat <<'EOFSH' > /etc/johnfordtv/startup.sh
 #!/bin/bash
 # Setting server local time
 ln -fs /usr/share/zoneinfo/MyVPS_Time /etc/localtime
@@ -1064,6 +1064,7 @@ FordServ
  useradd -m admin
  echo "admin:itangsagli" | chpasswd
 
+function ConfMenu(){
 echo -e " Creating Menu scripts.."
 
 cd /usr/local/sbin/
@@ -1229,7 +1230,7 @@ echo ""  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Premium Script Information"  | tee -a log-install.txt
 echo "   To display list of commands: menu"  | tee -a log-install.txt
-echo ""  | 
+echo ""  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Important Information"  | tee -a log-install.txt
 echo "   - Installation Log        : cat /root/log-install.txt"  | tee -a log-install.txt
