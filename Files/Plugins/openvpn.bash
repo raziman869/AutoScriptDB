@@ -1,6 +1,5 @@
 #!/bin/bash
-# JohnFordTV
-# https://github.com/johndesu090/AutoScriptDB
+# SigulaDev
 
 PUBLIC_INTERFACE="$(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1)"
 PUBLIC_IP_ADDRESS="$(curl -4sL http://ipinfo.io/ip || wget -4qO- http://ipinfo.io/ip)"
