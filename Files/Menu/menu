@@ -1,6 +1,6 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+#Script by SigulaDev
 
 if [[ -e /etc/debian_version ]]; then
 	OS=debian
@@ -17,7 +17,7 @@ color1='\e[031;1m'
 color2='\e[34;1m'
 color3='\e[0m'
 echo "--------------- Welcome To Premium Script Menu ---------------"
-	echo "----------------- by FordSenpai --------------------"
+	echo "----------------- by SigulaDev --------------------"
 	echo " "
 	cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 	cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
@@ -83,7 +83,7 @@ echo -e "-----=[ Others ]=-----"
 echo -e "${color1}35${color3}.View Installation Log (${color2}log-install${color3})"
 echo -e "${color1}36${color3}.VPS Diagnostics (${color2}diagnosa${color3})"
 echo -e "${color1}37${color3}.Exit Menu (${color2}exit${color3})"
-echo "------------------------Script by FordSenpai-----------------------------"
+echo "------------------------Script by SigulaDev-----------------------------"
 read -p "Choose an option from (1-37): " x
 if test $x -eq 1; then
 user-add
@@ -169,7 +169,7 @@ diagnosa
 elif test $x -eq 37; then
 echo " "
 echo "Goodbye Menu!"
-echo "Script by FordSenpai"
+echo "Script by SigulaDev"
 echo " "
 exit
 else
