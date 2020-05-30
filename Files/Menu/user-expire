@@ -1,6 +1,6 @@
 #!/bin/bash
 #Licensed to https://www.hostingtermurah.net/
-#Script by FordSenpai
+#Script by SigulaDev
 
 red='\e[1;31m'
 green='\e[0;32m'
@@ -19,9 +19,9 @@ echo -e "${green}Permission Accepted...${NC}"
 sleep 1
 clear
 fi
-echo "echo "Script Created By FordSenpai"" > /usr/local/bin/infouser
-echo "echo "Script Created By FordSenpai"" > /usr/local/bin/expireduser
-echo "echo "Script Created By FordSenpai"" > /usr/local/bin/alluser
+echo "echo "Script Created By SigulaDev"" > /usr/local/bin/infouser
+echo "echo "Script Created By SigulaDev"" > /usr/local/bin/expireduser
+echo "echo "Script Created By SigulaDev"" > /usr/local/bin/alluser
 chmod +x /usr/local/bin/infouser
 chmod +x /usr/local/bin/expireduser
 chmod +x /usr/local/bin/alluser
