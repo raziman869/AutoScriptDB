@@ -8,8 +8,7 @@
 MyScriptName='SigulaDev-Premium Script'
 
 # OpenSSH Ports
-SSH_Port1='226'
-SSH_Port2='53'
+SSH_Port1='53'
 SSH_Port2='80'
 
 # Your SSH Banner
