@@ -270,6 +270,8 @@ persist-tun
 status openvpn-status.log
 log tcp.log
 verb 2
+duplicate-cn
+max-clients 30
 ncp-disable
 cipher none
 auth none
@@ -301,6 +303,8 @@ persist-tun
 status openvpn-status.log
 log udp.log
 verb 2
+duplicate-cn
+max-clients 30
 ncp-disable
 cipher none
 auth none
