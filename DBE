@@ -272,7 +272,7 @@ status openvpn-status.log
 log tcp.log
 verb 2
 duplicate-cn
-max-clients 30
+max-clients 200
 ncp-disable
 cipher none
 auth none
