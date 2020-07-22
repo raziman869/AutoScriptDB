@@ -21,10 +21,11 @@ Dropbear_Port2='442'
 
 # Stunnel Ports
 Stunnel_Port1='446' # through Dropbear
-Stunnel_Port2='444' # through OpenSSH
+Stunnel_Port2='443' # through OpenSSH
 
 # OpenVPN Ports
-OpenVPN_TCP_Port='443'
+OpenVPN_TCP_Port='444'
+OpenVPN_TCP_Port='1194'
 OpenVPN_UDP_Port='53'
 
 # Privoxy Ports
