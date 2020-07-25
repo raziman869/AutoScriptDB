@@ -10,7 +10,6 @@ MyScriptName='SigulaDev-Premium Script'
 # OpenSSH Ports
 SSH_Port1='22'
 SSH_Port2='447'
-SSH_Port2='80'
 
 # Your SSH Banner
 SSH_Banner='https://raw.githubusercontent.com/raziman869/AutoScriptDB/master/Files/Plugins/banner'
